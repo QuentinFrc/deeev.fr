@@ -5,6 +5,7 @@ import TechDivider from "../components/TechDivider";
 import KeyValuePoints from "../components/KeyValuePoints";
 import CTASection from "../components/CTASection";
 import TestimonialsSection from "../components/TestimonialsSection";
+import TimelineSteps from "../components/TimelineSteps";
 
 export default function POCPage() {
   return (
@@ -43,6 +44,31 @@ export default function POCPage() {
       />
       <LogosDivider />
       <OfferSection variant="poc" />
+      <TimelineSteps
+        accentColor="#34d399"
+        steps={[
+          {
+            title: "Atelier problématique",
+            description: "On isole la question critique — technique, UX ou marché — et on définit le protocole de test.",
+            duration: "Jour 1–2",
+          },
+          {
+            title: "Prototype & Design",
+            description: "Maquette interactive ou démo fonctionnelle, suffisamment réelle pour tester.",
+            duration: "Semaine 1",
+          },
+          {
+            title: "Test & Itération",
+            description: "Confrontation aux utilisateurs ou à la contrainte technique. Boucle courte de feedback.",
+            duration: "Semaine 2",
+          },
+          {
+            title: "Verdict & Plan d'action",
+            description: "Résultats concrets, recommandations, et décision claire : MVP, pivot ou abandon.",
+            duration: "Semaine 3",
+          },
+        ]}
+      />
       <KeyValuePoints
         sectionTitle="Key Value Points"
         subtitle="Les 6 points qui font du POC un outil de décision rapide et utile."

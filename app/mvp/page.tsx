@@ -5,6 +5,7 @@ import TechDivider from "../components/TechDivider";
 import KeyValuePoints from "../components/KeyValuePoints";
 import CTASection from "../components/CTASection";
 import TestimonialsSection from "../components/TestimonialsSection";
+import TimelineSteps from "../components/TimelineSteps";
 
 export default function MVPPage() {
   return (
@@ -43,6 +44,31 @@ export default function MVPPage() {
       />
       <LogosDivider sourceHref="https://www.untitledui.com/react/resources/logos" />
       <OfferSection variant="mvp" />
+      <TimelineSteps
+        accentColor="#f87171"
+        steps={[
+          {
+            title: "Cadrage & Scope",
+            description: "Atelier produit pour fixer les priorités, le périmètre fonctionnel et l'architecture cible.",
+            duration: "Semaine 1",
+          },
+          {
+            title: "Design UI/UX",
+            description: "Maquettes Figma complètes, design system, et validation des parcours utilisateurs.",
+            duration: "Semaines 2–3",
+          },
+          {
+            title: "Développement",
+            description: "Frontend, API, intégrations. Sprints courts avec démos régulières à chaque étape.",
+            duration: "Semaines 4–7",
+          },
+          {
+            title: "Livraison & Handoff",
+            description: "Déploiement, documentation technique, et transfert complet. Produit autonome.",
+            duration: "Semaine 8",
+          },
+        ]}
+      />
       <KeyValuePoints
         sectionTitle="Key Value Points"
         subtitle="Les 6 points qui rendent ce format MVP pragmatique et durable."
