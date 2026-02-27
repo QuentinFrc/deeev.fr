@@ -49,31 +49,37 @@ export default function POCPage() {
         accentColor="#34d399"
         points={[
           {
+            icon: "shield",
             title: "Réduction du risque",
             description:
               "Un POC bien cadré vous évite d'investir des mois de dev sur une hypothèse fausse. On identifie le point de friction critique et on y répond d'abord.",
           },
           {
+            icon: "crosshair",
             title: "Question unique, réponse claire",
             description:
               "On ne fait pas un POC fourre-tout. On isole une hypothèse - technique, UX ou marché - et on la teste avec rigueur. Le livrable final, c'est une décision.",
           },
           {
+            icon: "loop",
             title: "Design & Tech dès le départ",
             description:
               "Même pour un POC, séparer design et dev ralentit tout. On travaille en boucle courte: maquette -> feedback -> intégration -> test.",
           },
           {
+            icon: "zap",
             title: "Vitesse d'exécution",
             description:
               "1 à 3 semaines, pas 3 mois. On est habitués à travailler sous contrainte de temps sans sacrifier la qualité du rendu.",
           },
           {
+            icon: "compass",
             title: "Orientation post-POC",
             description:
               "On ne vous laisse pas avec un prototype sans lendemain. Chaque POC se termine par un plan d'action: MVP, pivot ou abandon.",
           },
           {
+            icon: "brain",
             title: "Connaissance du domaine SaaS",
             description:
               "On a suffisamment construit pour savoir ce qui tient dans le temps et ce qui casse. On vous évite les pièges classiques de l'early-stage.",

@@ -49,31 +49,37 @@ export default function MVPPage() {
         accentColor="#f87171"
         points={[
           {
+            icon: "crosshair",
             title: "Arbitrage Design × Tech",
             description:
               "On ne sépare jamais design et développement. Chaque décision UI/UX est pensée avec les contraintes techniques et inversement.",
           },
           {
+            icon: "layers",
             title: "Architecture scalable dès le départ",
             description:
               "On code pour ce que vous êtes aujourd'hui, en préparant ce que vous serez demain. Pas de dette technique cachée, pas de refonte dans 6 mois.",
           },
           {
+            icon: "eye",
             title: "Vision Produit, pas juste exécution",
             description:
               "Vous apportez votre métier. On challenge le scope, on priorise ce qui compte, on évite ce qui ne sert à rien.",
           },
           {
+            icon: "zap",
             title: "Exécution rapide & prédictible",
             description:
               "Timeline et budget fixés en amont. On travaille en sprints courts avec des livrables visibles à chaque étape.",
           },
           {
+            icon: "package",
             title: "Livrable clé en main",
             description:
               "MVP déployé, designé, documenté et handoffé. Vous repartez avec un produit prêt à évoluer.",
           },
           {
+            icon: "rocket",
             title: "Expérience startup & SaaS",
             description:
               "On a vécu le cycle complet: idée → design → dev → production → itération. On sait ce que coûte un MVP mal cadré.",

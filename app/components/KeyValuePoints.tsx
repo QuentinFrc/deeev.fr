@@ -1,6 +1,9 @@
+import AnimatedIcon from "./AnimatedIcon";
+
 export interface ValuePoint {
   title: string;
   description: string;
+  icon?: string;
 }
 
 interface KeyValuePointsProps {
@@ -32,22 +35,23 @@ export default function KeyValuePoints({
           {points.map((point, i) => (
             <article
               key={point.title}
-              className="group relative bg-white/[0.02] border border-white/[0.05] rounded-2xl p-7 md:p-8 flex flex-col gap-4 transition-all duration-300 hover:border-white/[0.12] hover:-translate-y-[2px]"
+              className="group relative card-depth border border-white/[0.07] border-t-white/[0.13] rounded-2xl p-7 md:p-8 flex flex-col gap-4 transition-all duration-300 hover:border-white/[0.12] hover:border-t-white/[0.2] hover:-translate-y-[2px]"
             >
-              {/* Accent line — visible on hover */}
+              {/* Accent line — always visible, brightens on hover */}
               <div
-                className="absolute top-0 left-6 right-6 h-px opacity-0 group-hover:opacity-40 transition-opacity duration-300"
+                className="absolute top-0 left-6 right-6 h-px opacity-25 group-hover:opacity-50 transition-opacity duration-300"
                 style={{
                   background: `linear-gradient(90deg, transparent, ${accentColor}, transparent)`,
                 }}
               />
 
-              <span
-                className="font-mono text-[28px] font-medium leading-none tracking-tight select-none"
-                style={{ color: accentColor, opacity: 0.2 }}
-              >
-                {String(i + 1).padStart(2, "0")}
-              </span>
+              <div className="opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                <AnimatedIcon
+                  name={point.icon ?? String(i + 1).padStart(2, "0")}
+                  color={accentColor}
+                  size={28}
+                />
+              </div>
 
               <h3 className="font-geologica font-medium text-[15px] md:text-base text-white tracking-[-0.3px]">
                 {point.title}

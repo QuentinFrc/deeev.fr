@@ -26,12 +26,12 @@ export default function TestimonialsSection({
           {testimonials.map((item) => (
             <article
               key={item.label}
-              className="group relative bg-white/[0.02] border border-white/[0.05] rounded-2xl p-7 md:p-8 flex flex-col gap-5 transition-colors duration-300 hover:border-white/[0.12] overflow-hidden"
+              className="group relative card-depth border border-white/[0.07] border-t-white/[0.13] rounded-2xl p-7 md:p-8 flex flex-col gap-5 transition-all duration-300 hover:border-white/[0.12] hover:border-t-white/[0.2] overflow-hidden"
             >
               {/* Decorative quotation mark */}
               <span
                 className="absolute -top-1 right-5 font-bricolage text-[80px] leading-none select-none pointer-events-none"
-                style={{ color: accentColor, opacity: 0.05 }}
+                style={{ color: accentColor, opacity: 0.07 }}
               >
                 &ldquo;
               </span>

@@ -131,6 +131,12 @@ body {
   font-family: var(--font-solitreo), cursive;
 }
 
+/* Card depth system — dark theme uses brightness differential + top-lit gradients */
+.card-depth {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.018) 100%);
+  border-top-color: rgba(255, 255, 255, 0.13);
+}
+
 /* Marquee animation */
 @keyframes marquee {
   from {
