@@ -46,34 +46,35 @@ export default function MVPPage() {
       <KeyValuePoints
         sectionTitle="Key Value Points"
         subtitle="Les 6 points qui rendent ce format MVP pragmatique et durable."
+        accentColor="#f87171"
         points={[
           {
-            title: "🎯 Arbitrage Design × Tech",
+            title: "Arbitrage Design × Tech",
             description:
               "On ne sépare jamais design et développement. Chaque décision UI/UX est pensée avec les contraintes techniques et inversement.",
           },
           {
-            title: "🏗️ Architecture scalable dès le départ",
+            title: "Architecture scalable dès le départ",
             description:
               "On code pour ce que vous êtes aujourd'hui, en préparant ce que vous serez demain. Pas de dette technique cachée, pas de refonte dans 6 mois.",
           },
           {
-            title: "🧠 Vision Produit, pas juste exécution",
+            title: "Vision Produit, pas juste exécution",
             description:
               "Vous apportez votre métier. On challenge le scope, on priorise ce qui compte, on évite ce qui ne sert à rien.",
           },
           {
-            title: "⚡ Exécution rapide & prédictible",
+            title: "Exécution rapide & prédictible",
             description:
               "Timeline et budget fixés en amont. On travaille en sprints courts avec des livrables visibles à chaque étape.",
           },
           {
-            title: "📦 Livrable clé en main",
+            title: "Livrable clé en main",
             description:
               "MVP déployé, designé, documenté et handoffé. Vous repartez avec un produit prêt à évoluer.",
           },
           {
-            title: "🤝 Expérience startup & SaaS",
+            title: "Expérience startup & SaaS",
             description:
               "On a vécu le cycle complet: idée → design → dev → production → itération. On sait ce que coûte un MVP mal cadré.",
           },
@@ -81,6 +82,7 @@ export default function MVPPage() {
       />
       <TestimonialsSection
         sectionTitle="Testimonials"
+        accentColor="#f87171"
         testimonials={[
           {
             label: "[Testimonial Quentin]",
