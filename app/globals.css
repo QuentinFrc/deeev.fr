@@ -210,6 +210,46 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* ── Architecture illustration animations ── */
+@keyframes arch-orbit-spin {
+  from { transform-origin: center; transform: rotate(0deg); }
+  to   { transform-origin: center; transform: rotate(360deg); }
+}
+@keyframes arch-pulse {
+  0%, 100% { r: 40; opacity: 0.15; }
+  50%      { r: 48; opacity: 0.06; }
+}
+@keyframes arch-flow-dash {
+  from { stroke-dashoffset: 0; }
+  to   { stroke-dashoffset: -48; }
+}
+@keyframes arch-node-appear {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes arch-float {
+  0%, 100% { transform: translateY(0); opacity: 0.25; }
+  50%      { transform: translateY(-6px); opacity: 0.5; }
+}
+
+.arch-orbit {
+  animation: arch-orbit-spin 40s linear infinite;
+  transform-origin: 420px 240px;
+}
+.arch-pulse-ring {
+  animation: arch-pulse 3s ease-in-out infinite;
+}
+.arch-flow {
+  animation: arch-flow-dash 2.5s linear infinite;
+}
+.arch-node {
+  animation: arch-node-appear 0.8s ease-out both;
+  transform-origin: center;
+}
+.arch-float-particle {
+  animation: arch-float 4s ease-in-out infinite;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

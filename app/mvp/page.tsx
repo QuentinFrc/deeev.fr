@@ -7,6 +7,7 @@ import CTASection from "../components/CTASection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import TimelineSteps from "../components/TimelineSteps";
 import { SectionGutters } from "../components/Gutters";
+import ArchitectureIllustration from "../components/ArchitectureIllustration";
 
 export default function MVPPage() {
   return (
@@ -47,6 +48,25 @@ export default function MVPPage() {
       </SectionGutters>
       <LogosDivider sourceHref="https://www.untitledui.com/react/resources/logos" />
       <OfferSection variant="mvp" />
+
+      {/* Architecture illustration — animated infrastructure overview */}
+      <section className="py-16 md:py-28">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col gap-6 mb-12 max-w-2xl">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+              Architecture
+            </span>
+            <h2 className="font-bricolage font-extrabold text-[30px] md:text-[42px] leading-[1.05] tracking-[-1.5px] gradient-text">
+              Un écosystème complet, dès le jour&nbsp;1.
+            </h2>
+            <p className="font-geologica font-light text-sm text-white/50 leading-relaxed max-w-lg">
+              Déploiement, IA, base de données, paiement — chaque brique est choisie, intégrée et orchestrée pour que votre produit tourne en production sans compromis.
+            </p>
+          </div>
+          <ArchitectureIllustration accentColor="#f87171" />
+        </div>
+      </section>
+
       <TimelineSteps
         accentColor="#f87171"
         steps={[
