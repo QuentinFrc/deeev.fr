@@ -17,10 +17,10 @@ export default function LogosDivider({
   sourceHref,
 }: LogosDividerProps) {
   return (
-    <section className="relative py-10 md:py-14 overflow-hidden border-y border-white/[0.06]">
+    <section className="relative py-10 md:py-14 overflow-hidden border-y border-foreground/[0.06]">
       {/* Edge fade masks */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
       {/* Scrolling track */}
       <div
@@ -30,7 +30,7 @@ export default function LogosDivider({
         {[...logos, ...logos].map((name, i) => (
           <span
             key={i}
-            className="font-bricolage font-extrabold text-xl md:text-2xl text-white/[0.1] uppercase tracking-widest whitespace-nowrap select-none"
+            className="font-bricolage font-extrabold text-xl md:text-2xl text-foreground/[0.1] uppercase tracking-widest whitespace-nowrap select-none"
           >
             {name}
           </span>
@@ -43,7 +43,7 @@ export default function LogosDivider({
             href={sourceHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-xs text-white/35 hover:text-white/60 transition-colors"
+            className="font-mono text-xs text-foreground/35 hover:text-foreground/60 transition-colors"
           >
             source: {sourceHref}
           </a>

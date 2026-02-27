@@ -26,7 +26,7 @@ export default function TestimonialsSection({
           {testimonials.map((item) => (
             <article
               key={item.label}
-              className="group relative card-depth border border-white/[0.07] border-t-white/[0.13] rounded-2xl p-7 md:p-8 flex flex-col gap-5 transition-all duration-300 hover:border-white/[0.12] hover:border-t-white/[0.2] overflow-hidden"
+              className="group relative card-depth border border-foreground/[0.07] border-t-foreground/[0.13] rounded-2xl p-7 md:p-8 flex flex-col gap-5 transition-all duration-300 hover:border-foreground/[0.12] hover:border-t-foreground/[0.2] overflow-hidden"
             >
               {/* Decorative quotation mark */}
               <span
@@ -36,11 +36,11 @@ export default function TestimonialsSection({
                 &ldquo;
               </span>
 
-              <span className="relative font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+              <span className="relative font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/25">
                 {item.label}
               </span>
 
-              <blockquote className="relative font-geologica font-light text-[15px] md:text-base text-white/60 leading-relaxed italic">
+              <blockquote className="relative font-geologica font-light text-[15px] md:text-base text-foreground/60 leading-relaxed italic">
                 {item.quote}
               </blockquote>
 
@@ -54,7 +54,7 @@ export default function TestimonialsSection({
                 >
                   {item.author.charAt(0)}
                 </div>
-                <p className="font-geologica text-[13px] text-white/35">
+                <p className="font-geologica text-[13px] text-foreground/35">
                   {item.author}
                 </p>
               </div>

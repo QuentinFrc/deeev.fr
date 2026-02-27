@@ -43,10 +43,10 @@ export default function TimelineSteps({
                     <div
                       className="relative w-[11px] h-[11px] rounded-full"
                       style={{
-                        background: isFirst ? accentColor : "rgba(255,255,255,0.10)",
+                        background: isFirst ? accentColor : `rgba(var(--fg-channel), 0.10)`,
                         boxShadow: isFirst
                           ? `0 0 0 3px ${accentColor}15`
-                          : "0 0 0 3px rgba(255,255,255,0.03)",
+                          : `0 0 0 3px rgba(var(--fg-channel), 0.03)`,
                       }}
                     />
                   </div>
@@ -57,8 +57,8 @@ export default function TimelineSteps({
                       className="h-px flex-1 ml-2.5"
                       style={{
                         background: isFirst
-                          ? `linear-gradient(to right, ${accentColor}30, rgba(255,255,255,0.06))`
-                          : "linear-gradient(to right, rgba(255,255,255,0.06), rgba(255,255,255,0.04))",
+                          ? `linear-gradient(to right, ${accentColor}30, rgba(var(--fg-channel), 0.06))`
+                          : `linear-gradient(to right, rgba(var(--fg-channel), 0.06), rgba(var(--fg-channel), 0.04))`,
                       }}
                     />
                   )}
@@ -66,16 +66,16 @@ export default function TimelineSteps({
 
                 {/* ── Content ── */}
                 <div className="flex flex-col gap-1.5">
-                  <h3 className="font-geologica font-medium text-[14px] md:text-[15px] text-white/90 tracking-[-0.3px] leading-snug">
+                  <h3 className="font-geologica font-medium text-[14px] md:text-[15px] text-foreground/90 tracking-[-0.3px] leading-snug">
                     {step.title}
                   </h3>
-                  <p className="font-geologica font-light text-[12px] md:text-[13px] text-white/35 leading-relaxed tracking-[-0.2px]">
+                  <p className="font-geologica font-light text-[12px] md:text-[13px] text-foreground/35 leading-relaxed tracking-[-0.2px]">
                     {step.description}
                   </p>
                 </div>
 
                 {/* ── Duration ── */}
-                <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-white/20 mt-auto pt-2">
+                <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-foreground/20 mt-auto pt-2">
                   {step.duration}
                 </span>
               </div>

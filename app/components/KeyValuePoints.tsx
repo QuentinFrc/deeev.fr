@@ -40,11 +40,11 @@ export default function KeyValuePoints({
                 />
               </div>
 
-              <h3 className="font-geologica font-medium text-[15px] text-white tracking-[-0.3px]">
+              <h3 className="font-geologica font-medium text-[15px] text-foreground tracking-[-0.3px]">
                 {point.title}
               </h3>
 
-              <p className="font-geologica font-light text-[13px] text-white/40 leading-relaxed tracking-[-0.2px]">
+              <p className="font-geologica font-light text-[13px] text-foreground/40 leading-relaxed tracking-[-0.2px]">
                 {point.description}
               </p>
             </article>

@@ -80,8 +80,8 @@ export default function Hero({ label, h1, subtitle, timeline, reassurance, accen
               90deg,
               transparent,
               transparent 2px,
-              rgba(255,255,255,0.03) 2px,
-              rgba(255,255,255,0.03) 4px
+              rgba(var(--fg-channel), 0.03) 2px,
+              rgba(var(--fg-channel), 0.03) 4px
             )`
           }}
         />
@@ -123,7 +123,7 @@ export default function Hero({ label, h1, subtitle, timeline, reassurance, accen
           {/* Hero content */}
           <div className="flex flex-col gap-8">
             {/* Label */}
-            <span className="text-sm font-medium tracking-widest uppercase text-white/40 font-geologica">
+            <span className="text-sm font-medium tracking-widest uppercase text-foreground/40 font-geologica">
               {label} — {timeline}
             </span>
 
@@ -133,7 +133,7 @@ export default function Hero({ label, h1, subtitle, timeline, reassurance, accen
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base md:text-lg text-white/80 font-light tracking-[-0.54px] font-geologica max-w-[600px]">
+            <p className="text-base md:text-lg text-foreground/80 font-light tracking-[-0.54px] font-geologica max-w-[600px]">
               {subtitle}
             </p>
 
@@ -145,11 +145,11 @@ export default function Hero({ label, h1, subtitle, timeline, reassurance, accen
           <div className="flex flex-col gap-3">
             {reassurance.map((item) => (
               <div key={item.title} className="flex gap-2 items-center">
-                <div className="w-5 h-5 flex items-center justify-center text-white">
+                <div className="w-5 h-5 flex items-center justify-center text-foreground">
                   {iconMap[item.icon]}
                 </div>
-                <p className="text-base tracking-[-0.48px] text-white/60 font-light font-geologica">
-                  <span className="font-medium text-white">{item.title}</span>
+                <p className="text-base tracking-[-0.48px] text-foreground/60 font-light font-geologica">
+                  <span className="font-medium text-foreground">{item.title}</span>
                   {" "}{item.description}
                 </p>
               </div>
@@ -159,7 +159,7 @@ export default function Hero({ label, h1, subtitle, timeline, reassurance, accen
 
         {/* Footer timestamp */}
         <div>
-          <span className="font-mono text-sm text-white/40">
+          <span className="font-mono text-sm text-foreground/40">
             From Paris, France (UTC+1) - {new Date().toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })}
           </span>
         </div>

@@ -35,7 +35,7 @@ export function SectionGutters({ children, accentColor = "#ffffff", animated = t
             {Array.from({ length: COLS + 1 }).map((_, i) => (
               <div
                 key={i}
-                className="h-full w-px bg-white/[0.04]"
+                className="h-full w-px bg-foreground/[0.04]"
                 style={{
                   gridColumn: i < COLS ? i + 1 : COLS,
                   justifySelf: i < COLS ? "start" : "end",

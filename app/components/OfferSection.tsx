@@ -13,10 +13,10 @@ type OfferContent = {
 };
 
 const B = ({ children }: { children: ReactNode }) => (
-  <strong className="text-white/80 font-medium">{children}</strong>
+  <strong className="text-foreground/80 font-medium">{children}</strong>
 );
 const C = ({ children }: { children: ReactNode }) => (
-  <code className="font-mono text-[12px] text-white/50 bg-white/[0.04] px-1.5 py-0.5 rounded">
+  <code className="font-mono text-[12px] text-foreground/50 bg-foreground/[0.04] px-1.5 py-0.5 rounded">
     {children}
   </code>
 );
@@ -216,7 +216,7 @@ export default function OfferSection({ variant }: OfferSectionProps) {
       <div className="max-w-[1200px] mx-auto">
         {/* ── Section header ── */}
         <div className="flex flex-col gap-6 mb-10">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/25">
             {VARIANT_LABELS[variant]}
           </span>
 
@@ -226,11 +226,11 @@ export default function OfferSection({ variant }: OfferSectionProps) {
 
           {/* Badge pills for duration + pricing */}
           <div className="flex items-center gap-2.5 flex-wrap">
-            <span className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-wide px-2 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-white/50">
+            <span className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-wide px-2 py-1 rounded-full border border-foreground/[0.08] bg-foreground/[0.03] text-foreground/50">
               <span style={{ color: accent }}><ClockIcon /></span>
               {content.timeline}
             </span>
-            <span className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-wide px-2 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-white/50">
+            <span className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-wide px-2 py-1 rounded-full border border-foreground/[0.08] bg-foreground/[0.03] text-foreground/50">
               <span style={{ color: accent }}><TagIcon /></span>
               {content.budget}
             </span>
@@ -242,7 +242,7 @@ export default function OfferSection({ variant }: OfferSectionProps) {
           {content.sections.map((section, i) => (
             <div
               key={i}
-              className="flex flex-col gap-3 font-geologica font-light text-sm text-white/50 leading-relaxed"
+              className="flex flex-col gap-3 font-geologica font-light text-sm text-foreground/50 leading-relaxed"
             >
               {section.body}
             </div>

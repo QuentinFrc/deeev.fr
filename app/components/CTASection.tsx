@@ -13,7 +13,7 @@ export default function CTASection({ accentColor = "#af70d8ff" }: CTASectionProp
     <section className="px-6 md:px-20 py-16">
       <div className="max-w-[1352px] mx-auto flex flex-col gap-10">
         {/* CTA card */}
-        <div className="relative bg-[#161616] rounded-2xl overflow-hidden border border-white/[0.06]">
+        <div className="relative bg-[var(--cta-bg)] rounded-2xl overflow-hidden border border-foreground/[0.06]">
           {/* Silk background constrained to card */}
           <div className="absolute inset-0 opacity-50 mask-[radial-gradient(ellipse_600px_60%_at_50%_50%,black,transparent)]">
             <Silk
@@ -31,7 +31,7 @@ export default function CTASection({ accentColor = "#af70d8ff" }: CTASectionProp
               <h2 className="font-bricolage font-extrabold text-[32px] md:text-[40px] lg:text-[52px] leading-[1.05] tracking-[-1.56px] uppercase gradient-text">
                 Voyez concrètement ce qu&apos;on livre
               </h2>
-              <p className="font-geologica font-light text-base md:text-lg text-white/60 tracking-[-0.48px] max-w-xl leading-relaxed">
+              <p className="font-geologica font-light text-base md:text-lg text-foreground/60 tracking-[-0.48px] max-w-xl leading-relaxed">
                 Une vidéo courte qui montre le process, les livrables
                 et le résultat final&nbsp;— en détail.
               </p>
@@ -44,19 +44,19 @@ export default function CTASection({ accentColor = "#af70d8ff" }: CTASectionProp
         <footer className="flex items-center justify-between flex-wrap gap-y-4 gap-x-8 px-2">
           <Link
             href="/poc"
-            className="font-geologica font-light text-sm text-white/25 hover:text-white/60 transition-colors tracking-[-0.42px]"
+            className="font-geologica font-light text-sm text-foreground/25 hover:text-foreground/60 transition-colors tracking-[-0.42px]"
           >
             POC — 3&nbsp;semaines
           </Link>
           <Link
             href="/mvp"
-            className="font-geologica font-light text-sm text-white/25 hover:text-white/60 transition-colors tracking-[-0.42px]"
+            className="font-geologica font-light text-sm text-foreground/25 hover:text-foreground/60 transition-colors tracking-[-0.42px]"
           >
             MVP — 8&nbsp;semaines
           </Link>
           <a
             href="mailto:hello@deeev.fr"
-            className="font-geologica font-light text-sm text-white/25 hover:text-white/60 transition-colors tracking-[-0.42px]"
+            className="font-geologica font-light text-sm text-foreground/25 hover:text-foreground/60 transition-colors tracking-[-0.42px]"
           >
             hello@deeev.fr
           </a>
@@ -64,7 +64,7 @@ export default function CTASection({ accentColor = "#af70d8ff" }: CTASectionProp
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-geologica font-light text-sm text-white/25 hover:text-white/60 transition-colors tracking-[-0.42px]"
+            className="font-geologica font-light text-sm text-foreground/25 hover:text-foreground/60 transition-colors tracking-[-0.42px]"
           >
             LinkedIn
           </a>

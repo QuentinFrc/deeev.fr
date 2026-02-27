@@ -14,21 +14,21 @@ export default function Home() {
         </div>
 
         {/* Separator line */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10 md:hidden" />
-        <div className="absolute top-0 right-0 bottom-0 w-px bg-white/10 hidden md:block" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-foreground/10 md:hidden" />
+        <div className="absolute top-0 right-0 bottom-0 w-px bg-foreground/10 hidden md:block" />
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center gap-6 px-8 py-24 md:py-0 text-center">
-          <span className="font-mono text-xs tracking-widest uppercase text-white/30">
+          <span className="font-mono text-xs tracking-widest uppercase text-foreground/30">
             8 semaines
           </span>
           <h2 className="font-bricolage font-extrabold text-5xl md:text-6xl lg:text-7xl uppercase gradient-text">
             MVP
           </h2>
-          <p className="font-geologica font-light text-2xl text-white/50 max-w-xs group-hover:text-white/70 transition-colors duration-500">
+          <p className="font-geologica font-light text-2xl text-foreground/50 max-w-xs group-hover:text-foreground/70 transition-colors duration-500">
             Face à vos <span className="font-accent text-3xl text-[#f87171]">users</span>
           </p>
-          <span className="font-geologica text-sm text-white/20 group-hover:text-white/60 transition-colors duration-500">
+          <span className="font-geologica text-sm text-foreground/20 group-hover:text-foreground/60 transition-colors duration-500">
             Découvrir &rarr;
           </span>
         </div>
@@ -46,16 +46,16 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center gap-6 px-8 py-24 md:py-0 text-center">
-          <span className="font-mono text-xs tracking-widest uppercase text-white/30">
+          <span className="font-mono text-xs tracking-widest uppercase text-foreground/30">
             3 semaines
           </span>
           <h2 className="font-bricolage font-extrabold text-5xl md:text-6xl lg:text-7xl uppercase gradient-text">
             POC
           </h2>
-          <p className="font-geologica font-light text-2xl text-white/50 max-w-xs group-hover:text-white/70 transition-colors duration-500">
+          <p className="font-geologica font-light text-2xl text-foreground/50 max-w-xs group-hover:text-foreground/70 transition-colors duration-500">
             Devant les <span className="font-accent text-3xl text-[#34d399]">invests</span>
           </p>
-          <span className="font-geologica text-sm text-white/20 group-hover:text-white/60 transition-colors duration-500">
+          <span className="font-geologica text-sm text-foreground/20 group-hover:text-foreground/60 transition-colors duration-500">
             Découvrir &rarr;
           </span>
         </div>
