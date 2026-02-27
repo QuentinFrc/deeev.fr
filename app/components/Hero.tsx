@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import CTAButton from "./CTAButton";
 
 // Hero images
 const logoBackground = "https://www.figma.com/api/mcp/asset/45fcb658-0af0-4cc6-9d41-35499044cd1e";
@@ -137,11 +138,7 @@ export default function Hero({ label, h1, subtitle, timeline, reassurance, accen
             </p>
 
             {/* CTA Button */}
-            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black rounded-lg w-fit hover:bg-white/90 transition-colors mt-2">
-              <span className="text-base font-medium tracking-[-0.48px] font-geologica">
-                Réserver un appel découverte
-              </span>
-            </button>
+            <CTAButton className="mt-2" />
           </div>
 
           {/* Reassurance items */}
