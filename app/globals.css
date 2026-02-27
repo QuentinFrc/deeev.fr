@@ -137,6 +137,35 @@ body {
   border-top-color: rgba(255, 255, 255, 0.13);
 }
 
+/* Gutter streak — colored pulse traveling down a section */
+@keyframes gutter-streak {
+  0% {
+    top: -40px;
+    opacity: 0;
+  }
+  /* Long idle — wait */
+  75% {
+    top: -40px;
+    opacity: 0;
+  }
+  /* Fade in */
+  77% {
+    opacity: 1;
+  }
+  /* Fast descent */
+  92% {
+    opacity: 1;
+  }
+  95% {
+    top: 100%;
+    opacity: 0;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
 /* Marquee animation */
 @keyframes marquee {
   from {
