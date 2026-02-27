@@ -20,11 +20,18 @@ export default function KeyValuePoints({
   accentColor = "#ffffff",
 }: KeyValuePointsProps) {
   return (
-    <section className="py-16 md:py-28 px-6 md:px-20">
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
-        <h2 className="font-bricolage font-extrabold text-[34px] md:text-[46px] tracking-[-1.2px] uppercase gradient-text">
-          {sectionTitle}
-        </h2>
+    <section className="py-16 md:py-28">
+      <div className="container mx-auto px-6 flex flex-col gap-12">
+        <div className="flex flex-col gap-3">
+          <h2 className="font-bricolage font-extrabold text-[34px] md:text-[46px] tracking-[-1.2px] gradient-text">
+            {sectionTitle}
+          </h2>
+          {subtitle && (
+            <p className="font-geologica font-light text-sm text-white/40 leading-relaxed max-w-xl">
+              {subtitle}
+            </p>
+          )}
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 max-w-3xl">
           {points.map((point, i) => (

@@ -40,8 +40,8 @@ function Card({ title, description, className }: CardProps) {
 
 export default function WhatSection() {
   return (
-    <section className="bg-white py-28 px-6">
-      <div className="container mx-auto">
+    <section className="bg-white py-28">
+      <div className="container mx-auto px-6">
         <div className="flex flex-col gap-10">
           {/* Header */}
           <div className="flex flex-col gap-3">

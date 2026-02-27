@@ -14,8 +14,8 @@ export default function TimelineSteps({
   accentColor = "#ffffff",
 }: TimelineStepsProps) {
   return (
-    <section className="px-6 md:px-20 pb-16 md:pb-28 mt-8 md:mt-12">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="pb-16 md:pb-28 mt-8 md:mt-12">
+      <div className="container mx-auto px-6">
         <div
           className="relative grid"
           style={{ gridTemplateColumns: `repeat(${steps.length}, 1fr)` }}

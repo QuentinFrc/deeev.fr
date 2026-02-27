@@ -2,6 +2,8 @@ import type { ReactNode } from "react";
 
 interface OfferSectionProps {
   variant: "poc" | "mvp";
+  /** Optional fig label for the preview frame (e.g. "Fig. 1.1") */
+  previewLabel?: string;
 }
 
 type OfferContent = {
@@ -207,46 +209,123 @@ const VARIANT_LABELS: Record<OfferSectionProps["variant"], string> = {
   poc: "Proof of Concept",
 };
 
-export default function OfferSection({ variant }: OfferSectionProps) {
+/* ── Preview showcase frame ── */
+const PlayIcon = () => (
+  <svg
+    width="28"
+    height="28"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="text-white/30"
+  >
+    <polygon points="6 3 20 12 6 21 6 3" />
+  </svg>
+);
+
+function PreviewFrame({
+  label,
+  accentColor,
+}: {
+  label: string;
+  accentColor: string;
+}) {
+  return (
+    <div
+      className="relative rounded-2xl border border-white/[0.08] overflow-hidden"
+      style={{
+        background: `
+          radial-gradient(ellipse 90% 70% at 55% 40%, ${accentColor}18, transparent 65%),
+          radial-gradient(ellipse 60% 90% at 75% 55%, ${accentColor}0c, transparent 55%),
+          linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.005) 100%)
+        `,
+        boxShadow: `
+          0 0 0 1px ${accentColor}06,
+          0 2px 40px -8px ${accentColor}10,
+          inset 0 1px 0 0 rgba(255,255,255,0.04)
+        `,
+      }}
+    >
+      {/* Fig label */}
+      <span
+        className="absolute top-4 left-5 font-mono text-[10px] uppercase tracking-[0.15em] z-10"
+        style={{ color: `${accentColor}60` }}
+      >
+        {label}
+      </span>
+
+      {/* Placeholder content area */}
+      <div className="relative aspect-[4/3] flex items-center justify-center">
+        <div className="relative flex flex-col items-center gap-3">
+          <div
+            className="w-16 h-16 rounded-2xl border border-white/[0.08] flex items-center justify-center"
+            style={{
+              background: `linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)`,
+              boxShadow: `0 4px 24px ${accentColor}0a`,
+            }}
+          >
+            <PlayIcon />
+          </div>
+          <span className="font-mono text-[10px] text-white/20 uppercase tracking-widest">
+            Preview
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function OfferSection({ variant, previewLabel }: OfferSectionProps) {
   const content = CONTENT[variant];
   const accent = ACCENT_COLORS[variant];
+  const figLabel = previewLabel ?? `demo-deeev-${variant}.mp4`;
 
   return (
-    <section className="py-16 md:py-28 px-6 md:px-20">
-      <div className="max-w-[1200px] mx-auto">
-        {/* ── Section header ── */}
-        <div className="flex flex-col gap-6 mb-10">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
-            {VARIANT_LABELS[variant]}
-          </span>
+    <section className="py-16 md:py-28">
+      <div className="container mx-auto px-6">
+        {/* ── 2-col grid: prose left + preview right ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,520px)] gap-10 lg:gap-16 items-start">
+          {/* Left column: header + prose */}
+          <div>
+            {/* ── Section header ── */}
+            <div className="flex flex-col gap-6 mb-10">
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
+                {VARIANT_LABELS[variant]}
+              </span>
 
-          <h2 className="font-bricolage font-extrabold text-[30px] md:text-[42px] leading-[1.05] tracking-[-1.5px] gradient-text max-w-2xl">
-            {content.headline}
-          </h2>
+              <h2 className="font-bricolage font-extrabold text-[30px] md:text-[42px] leading-[1.05] tracking-[-1.5px] gradient-text">
+                {content.headline}
+              </h2>
 
-          {/* Badge pills for duration + pricing */}
-          <div className="flex items-center gap-2.5 flex-wrap">
-            <span className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-wide px-2 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-white/50">
-              <span style={{ color: accent }}><ClockIcon /></span>
-              {content.timeline}
-            </span>
-            <span className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-wide px-2 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-white/50">
-              <span style={{ color: accent }}><TagIcon /></span>
-              {content.budget}
-            </span>
-          </div>
-        </div>
-
-        {/* ── Prose content ── */}
-        <div className="flex flex-col gap-6 max-w-2xl">
-          {content.sections.map((section, i) => (
-            <div
-              key={i}
-              className="flex flex-col gap-3 font-geologica font-light text-sm text-white/50 leading-relaxed"
-            >
-              {section.body}
+              {/* Badge pills for duration + pricing */}
+              <div className="flex items-center gap-2.5 flex-wrap">
+                <span className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-wide px-2 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-white/50">
+                  <span style={{ color: accent }}><ClockIcon /></span>
+                  {content.timeline}
+                </span>
+                <span className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-wide px-2 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-white/50">
+                  <span style={{ color: accent }}><TagIcon /></span>
+                  {content.budget}
+                </span>
+              </div>
             </div>
-          ))}
+
+            {/* ── Prose content ── */}
+            <div className="flex flex-col gap-6">
+              {content.sections.map((section, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col gap-3 font-geologica font-light text-sm text-white/50 leading-relaxed"
+                >
+                  {section.body}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right column: preview frame */}
+          <div className="self-end">
+            <PreviewFrame label={figLabel} accentColor={accent} />
+          </div>
         </div>
       </div>
     </section>

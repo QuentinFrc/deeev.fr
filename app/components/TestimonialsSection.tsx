@@ -6,47 +6,37 @@ export interface Testimonial {
 
 interface TestimonialsSectionProps {
   sectionTitle: string;
+  subtitle?: string;
   testimonials: Testimonial[];
   accentColor?: string;
 }
 
 export default function TestimonialsSection({
   sectionTitle,
+  subtitle,
   testimonials,
   accentColor = "#ffffff",
 }: TestimonialsSectionProps) {
   return (
-    <section className="py-16 md:py-28 px-6 md:px-20">
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
-        <h2 className="font-bricolage font-extrabold text-[34px] md:text-[46px] tracking-[-1.2px] uppercase gradient-text">
-          {sectionTitle}
-        </h2>
+    <section className="py-16 md:py-28">
+      <div className="container mx-auto px-6 flex flex-col gap-10">
+        <div className="flex flex-col gap-3">
+          <h2 className="font-bricolage font-extrabold text-[34px] md:text-[46px] tracking-[-1.2px] gradient-text">
+            {sectionTitle}
+          </h2>
+          {subtitle && (
+            <p className="font-geologica font-light text-sm text-white/40 leading-relaxed max-w-xl">
+              {subtitle}
+            </p>
+          )}
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
-          {testimonials.map((item) => (
-            <article
-              key={item.label}
-              className="group relative card-depth border border-white/[0.07] border-t-white/[0.13] rounded-2xl p-7 md:p-8 flex flex-col gap-5 transition-all duration-300 hover:border-white/[0.12] hover:border-t-white/[0.2] overflow-hidden"
-            >
-              {/* Decorative quotation mark */}
-              <span
-                className="absolute -top-1 right-5 font-bricolage text-[80px] leading-none select-none pointer-events-none"
-                style={{ color: accentColor, opacity: 0.07 }}
-              >
-                &ldquo;
-              </span>
-
-              <span className="relative font-mono text-[10px] uppercase tracking-[0.2em] text-white/25">
-                {item.label}
-              </span>
-
-              <blockquote className="relative font-geologica font-light text-[15px] md:text-base text-white/60 leading-relaxed italic">
-                {item.quote}
-              </blockquote>
-
-              <div className="relative flex items-center gap-3 mt-auto pt-1">
+        <ul className="flex flex-col gap-8 max-w-2xl">
+          {testimonials.slice(0, 5).map((item) => (
+            <li key={item.label} className="flex flex-col gap-1">
+              <div className="flex items-center gap-2.5">
                 <div
-                  className="w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-medium shrink-0"
+                  className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-medium shrink-0"
                   style={{
                     backgroundColor: `${accentColor}18`,
                     color: accentColor,
@@ -54,13 +44,16 @@ export default function TestimonialsSection({
                 >
                   {item.author.charAt(0)}
                 </div>
-                <p className="font-geologica text-[13px] text-white/35">
+                <span className="font-geologica text-sm text-white/70">
                   {item.author}
-                </p>
+                </span>
               </div>
-            </article>
+              <p className="font-geologica text-sm text-white/40 leading-relaxed pl-[34px] line-clamp-2">
+                {item.quote}
+              </p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
