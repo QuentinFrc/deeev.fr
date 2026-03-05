@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Silk from "@/components/Silk";
 import CTAButton from "./CTAButton";
 
@@ -40,19 +39,7 @@ export default function CTASection({ accentColor = "#af70d8ff" }: CTASectionProp
         </div>
 
         {/* Footer links */}
-        <footer className="flex items-center justify-between flex-wrap gap-y-4 gap-x-8 px-2">
-          <Link
-            href="/poc"
-            className="font-geologica font-light text-sm text-white/25 hover:text-white/60 transition-colors tracking-[-0.42px]"
-          >
-            POC — 3&nbsp;semaines
-          </Link>
-          <Link
-            href="/mvp"
-            className="font-geologica font-light text-sm text-white/25 hover:text-white/60 transition-colors tracking-[-0.42px]"
-          >
-            MVP — 8&nbsp;semaines
-          </Link>
+        <footer className="flex items-center justify-center flex-wrap gap-y-4 gap-x-8 px-2">
           <a
             href="mailto:hello@deeev.fr"
             className="font-geologica font-light text-sm text-white/25 hover:text-white/60 transition-colors tracking-[-0.42px]"
