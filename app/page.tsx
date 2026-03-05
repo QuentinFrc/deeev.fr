@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import LogosDivider from "./components/LogosDivider";
+import ComparisonSection from "./components/ComparisonSection";
 import OfferSection from "./components/OfferSection";
 import TechDivider from "./components/TechDivider";
 import KeyValuePoints from "./components/KeyValuePoints";
@@ -46,6 +47,7 @@ export default function Home() {
         />
       </SectionGutters>
       <LogosDivider sourceHref="https://www.untitledui.com/react/resources/logos" />
+      <ComparisonSection accentColor="#34d399" />
       <OfferSection />
       <TimelineSteps
         accentColor="#34d399"
